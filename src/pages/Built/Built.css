@@ -1,0 +1,57 @@
+.built-section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.built-wrapper{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.ingredients{
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  gap: 4rem;
+  list-style: none;
+}
+
+.ingredients li{
+  font-size: 1.5rem;
+}
+
+.pizza-img{
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pizza-img img{
+  width: 30rem;
+}
+
+.order-button{
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+}
+
+.order-button button{
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(to bottom, red, yellow);
+  background-clip: text;
+  color: transparent;
+  padding: 0.3rem;
+  border: none;
+}
