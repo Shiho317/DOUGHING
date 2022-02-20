@@ -1,0 +1,33 @@
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+}
+
+.header-left{
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.header-left img{
+  width: 3rem;
+}
+
+.header-right ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-right li{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
