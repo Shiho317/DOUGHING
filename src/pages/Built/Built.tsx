@@ -9,8 +9,8 @@ const Built = () => {
     <div className='built-section'>
       <div className="built-wrapper">
         <ul className="ingredients">
-          <li>Cook<Motion/></li>
-          <li>Dough</li>
+          <li>Cook</li>
+          <li>Dough<Motion/></li>
           <li>Green pepper</li>
           <li>Salami</li>
           <li>Olive</li>
