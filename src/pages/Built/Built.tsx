@@ -1,13 +1,15 @@
 import { BsArrowRight } from 'react-icons/bs';
 import pizza from '../../images/simple-dough.png';
 import '../Built/Built.css';
+import Motion from '../Motion/Motion';
+
 
 const Built = () => {
   return(
     <div className='built-section'>
       <div className="built-wrapper">
         <ul className="ingredients">
-          <li>Cook</li>
+          <li>Cook<Motion/></li>
           <li>Dough</li>
           <li>Green pepper</li>
           <li>Salami</li>
