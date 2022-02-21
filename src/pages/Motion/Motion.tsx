@@ -1,7 +1,5 @@
-import { flexbox } from '@mui/system';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaBlackTie } from 'react-icons/fa';
 
 
 const divStyle = {
@@ -54,15 +52,8 @@ const Motion = () => {
   const [isActive, setIsActive] = useState(true);
   const [isCook, setIsCook] = useState('Normal');
 
-  const controls = useAnimation();
-
   const toggleSwitch = () => {
     setIsActive(prev => !prev)
-    controls.start({
-      transition: {
-        duration: 5
-      }
-    });
     if(isCook === 'Normal'){
       setIsCook('Thick')
     }else{
@@ -73,7 +64,7 @@ const Motion = () => {
   return(
     <div style={divStyle}>
       <div style={isActive ? switchStyle : switchStyle2}  onClick={() => toggleSwitch()} >
-        <motion.div style={toggleStyle} animate={controls} transition={spring}>
+        <motion.div style={toggleStyle} transition={spring}>
           <p>{isCook}</p>
         </motion.div>
       </div>
