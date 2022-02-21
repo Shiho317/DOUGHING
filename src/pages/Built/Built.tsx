@@ -1,9 +1,11 @@
-import { BsArrowRight } from 'react-icons/bs';
+
 import pizza from '../../images/simple-dough.png';
 import '../Built/Built.css';
 import CheckBox from '../CheckBox/CheckBox';
 import Motion from '../Motion/Motion';
 import { Ingredients } from '../../Ingredients';
+import Header from '../Header/Header';
+import logoBlack from '../../images/doughing-logo-black.svg';
 
 export interface ItemTypeInfo{
   id: number;
@@ -14,13 +16,14 @@ export interface ItemTypeInfo{
 const Built = () => {
   return(
     <div className='built-section'>
+      <Header logo={logoBlack}/>
       <div className="built-wrapper">
         <ul className="ingredients">
           <li><p>{Ingredients.find(ele => ele.id === 1)?.item}</p><Motion/></li>
           {Ingredients.filter(ingredient => ingredient.id > 1).map(ingredient => (
             <li key={ingredient.id}>
               <p>{ingredient.item}</p>
-              <CheckBox/>
+              <CheckBox ingredient={ingredient}/>
             </li>
           ))}
         </ul>
@@ -28,7 +31,7 @@ const Built = () => {
           <img src={pizza} alt="pizza" />
         </div>
         <div className="order-button">
-          <button>Order your pizza <BsArrowRight style={{color: 'orange'}}/></button>
+          <button>Order your pizza</button>
         </div>
         
       </div>

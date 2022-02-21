@@ -1,10 +1,15 @@
 import Checkbox from '@mui/material/Checkbox';
 import { useState } from 'react';
 import { orange } from '@mui/material/colors';
+import { ItemTypeInfo } from '../Built/Built';
+
+type Props = {
+  ingredient: ItemTypeInfo;
+}
 
 
-const CheckBox = () => {
-  const [isChecked, setIsChecked] = useState(false);
+const CheckBox: React.FC<Props> = ({ingredient}) => {
+  const [isChecked, setIsChecked] = useState(ingredient.add);
 
   const handleChange = (e: any) => {
     setIsChecked(e.target.checked)

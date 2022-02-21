@@ -3,16 +3,19 @@ import { FaPizzaSlice } from 'react-icons/fa';
 import { MdOutlineAccountCircle } from 'react-icons/md';
 import { BiHistory } from 'react-icons/bi';
 import { RiCoupon3Line } from 'react-icons/ri';
-import headerLogo from '../../images/doughing-logo.svg';
 import Badge from '@mui/material/Badge';
 import './Header.css';
 
-const Header = () => {
+type Props = {
+  logo: string;
+};
+
+const Header: React.FC<Props> = ({logo}) => {
   return(
     <div>
       <div className='header'>
         <div className="header-left">
-          <img src={headerLogo} alt="logo" />
+          <img src={logo} alt="logo" />
           <h3>DOUGHING</h3>
         </div>
         <div className="header-right">

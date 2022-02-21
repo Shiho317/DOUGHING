@@ -1,9 +1,12 @@
-
+import logoWhite from '../../images/doughing-logo-white.svg';
 import './Hero.css';
+import heroImg from '../../images/hero-pizza.svg'
+import Header from '../Header/Header';
 
 const Hero = () => {
   return(
     <div className='hero-section'>
+      <Header logo={logoWhite}/>
       <div className="hero-wrap">
         <div className="hero-left">
           <div className="hero-title">
@@ -15,7 +18,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-right">
-          <img src="" alt="" />
+          <img src={heroImg} alt="big-logo" />
         </div>
       </div>
     </div>
