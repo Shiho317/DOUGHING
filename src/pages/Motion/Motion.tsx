@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-
 
 const divStyle = {
   background: 'orange',
@@ -46,20 +44,13 @@ const spring = {
   duration: 2
 };
 
+type Props ={
+  toggleSwitch: () => void;
+  isActive: boolean;
+  isCook: string;
+}
 
-const Motion = () => {
-
-  const [isActive, setIsActive] = useState(true);
-  const [isCook, setIsCook] = useState('Normal');
-
-  const toggleSwitch = () => {
-    setIsActive(prev => !prev)
-    if(isCook === 'Normal'){
-      setIsCook('Thick')
-    }else{
-      setIsCook('Normal')
-    }
-  };
+const Motion: React.FC<Props> = ({toggleSwitch, isActive, isCook}) => {
 
   return(
     <div style={divStyle}>
