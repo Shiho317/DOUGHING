@@ -1,7 +1,7 @@
 import logoWhite from '../../images/doughing-logo-white.svg';
 import './Hero.css';
-import heroImg from '../../images/hero-pizza.svg'
 import Header from '../Header/Header';
+import Svg from '../Motion/Svg';
 
 const Hero = () => {
   return(
@@ -18,7 +18,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-right">
-          <img src={heroImg} alt="big-logo" />
+          <Svg/>
         </div>
       </div>
     </div>

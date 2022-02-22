@@ -63,11 +63,11 @@ const Motion = () => {
 
   return(
     <div style={divStyle}>
-      <div style={isActive ? switchStyle : switchStyle2}  onClick={() => toggleSwitch()} >
-        <motion.div style={toggleStyle} transition={spring}>
+      <motion.div style={isActive ? switchStyle : switchStyle2}  onClick={() => toggleSwitch()} whileTap={{scale: 1.2}}>
+        <motion.button style={toggleStyle} whileTap={{transition: {duration: 2, ease: 'easeInOut'}}} transition={spring}>
           <p>{isCook}</p>
-        </motion.div>
-      </div>
+        </motion.button>
+      </motion.div>
     </div>
   )
 };
