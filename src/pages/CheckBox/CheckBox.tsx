@@ -5,19 +5,30 @@ import { ItemTypeInfo } from '../Built/Built';
 
 type Props = {
   ingredient: ItemTypeInfo;
+  setIsBurned: any;
+  setAddGreenPepper: any;
 }
 
 
-const CheckBox: React.FC<Props> = ({ingredient}) => {
-  const [isChecked, setIsChecked] = useState(ingredient.add);
+const CheckBox: React.FC<Props> = ({ingredient, setIsBurned, setAddGreenPepper}) => {
 
+  const [checked, setChecked] = useState(ingredient.add);
+  
   const handleChange = (e: any) => {
-    setIsChecked(e.target.checked)
+    setChecked(e.target.checked);
+    ingredient.add = e.target.checked;
+    
+    if(ingredient.item === 'Cooked well'){
+      setIsBurned(ingredient.add)
+    };
+    if(ingredient.item === 'Green pepper'){
+      setAddGreenPepper(ingredient.add);
+    };
   };
 
   return(
     <Checkbox
-      checked={isChecked}
+      checked={checked}
       onChange={handleChange}
       inputProps={{ 'aria-label': 'controlled' }}
       sx={{

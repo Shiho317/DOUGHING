@@ -1,3 +1,7 @@
+.hidden{
+  display: none;
+  opacity: 0;
+}
 
 .built-section{
   position: relative;
@@ -45,6 +49,119 @@
 
 .pizza-img img{
   width: 30rem;
+}
+
+.pizza-burn{
+  position: absolute;
+  top: 12vh;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 1s ease;
+}
+
+.pizza-burn img{
+  width: 33rem;
+}
+
+.green-peppers{
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 1s ease;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+}
+
+.gp1,
+.gp2,
+.gp3,
+.gp4,
+.gp5,
+.gp6,
+.gp7,
+.gp8,
+.gp9{
+  position: absolute;
+  width: 3rem;
+}
+
+.unshown{
+  position: absolute;
+  top: -100vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  transition: all 1s ease;
+}
+
+.gp1 img,
+.gp2 img,
+.gp3 img,
+.gp4 img,
+.gp5 img,
+.gp6 img,
+.gp7 img,
+.gp8 img,
+.gp9 img{
+  position: absolute;
+  width: 3rem;
+  transition: all 0.5s ease;
+}
+
+.gp1{
+  top: 2rem;
+  left: 50%;
+}
+
+.gp2{
+  top: 20rem;
+  left: 35%;
+}
+
+.gp3{
+  top: 10rem;
+  left: 8%;
+  transform: rotate(90deg);
+}
+
+.gp4{
+  top: 15rem;
+  left: 25%;
+  transform: rotate(180deg);
+}
+
+.gp5{
+  top: 10rem;
+  left: 80%;
+  transform: rotate(45deg);
+}
+
+.gp6{
+  top: 15rem;
+  left: 55%;
+  transform: rotate(200deg);
+}
+
+.gp7{
+  top: 12rem;
+  left: 45%;
+  transform: rotate(20deg);
+}
+
+.gp8{
+  top: 23rem;
+  left: 60%;
+  transform: rotate(30deg);
+}
+
+.gp9{
+  top: 5rem;
+  left: 30%;
+  transform: rotate(-60deg);
 }
 
 .order-button{
