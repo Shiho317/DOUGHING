@@ -22,6 +22,11 @@
   border-radius: 15px;
 }
 
+.header-left a{
+  text-decoration: none;
+  color: unset;
+}
+
 .header-left h3:hover{
   color: #a6a6a6;
 }

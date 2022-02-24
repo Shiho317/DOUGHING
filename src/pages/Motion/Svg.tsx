@@ -21,7 +21,7 @@ const Svg = () => {
       opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 2,
+        duration: 3,
         ease: "easeInOut"
       }
     }

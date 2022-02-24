@@ -9,6 +9,10 @@ import Header from '../Header/Header';
 import logoBlack from '../../images/doughing-logo-black.svg';
 import Burned from './Ingredient/Burned';
 import GreenPepper from './Ingredient/GreenPepper';
+import Salami from './Ingredient/Salami';
+import Olive from './Ingredient/Olive';
+import Cheese from './Ingredient/Cheese';
+import Footer from '../Footer/Footer';
 
 export interface ItemTypeInfo{
   id: number;
@@ -37,6 +41,9 @@ const Built = () => {
 
   const [ isBurned, setIsBurned ] = useState(false);
   const [ addGreenPepper, setAddGreenPepper ] = useState(false);
+  const [ addSalami, setAddSalami ] = useState(false);
+  const [ addOlive, setAddOlive ] = useState(false);
+  const [ addCheese, setAddCheese ] = useState(false);
 
 
   return(
@@ -52,6 +59,9 @@ const Built = () => {
               ingredient={ingredient} 
               setIsBurned={setIsBurned}
               setAddGreenPepper={setAddGreenPepper}
+              setAddSalami={setAddSalami}
+              setAddOlive={setAddOlive}
+              setAddCheese={setAddCheese}
               />
             </li>
           ))}
@@ -64,17 +74,28 @@ const Built = () => {
             <Burned/>
           : null }
 
-          
-          <div className={addGreenPepper ? 'green-peppers' : 'unshown'}>
+          <div className={addCheese ? 'cheese-dough' : 'hidden' }>
+            <Cheese/>
+          </div>
+
+          <div className={addGreenPepper ? 'green-peppers' : 'unshown' }>
             <GreenPepper/>
           </div>
           
+          <div className={addSalami ? 'salamis' : 'unshown' }>
+            <Salami/>
+          </div>
+
+          <div className={addOlive ? 'olives' : 'unshown' }>
+            <Olive/>
+          </div>
           
         <div className="order-button">
           <button>Order your pizza</button>
         </div>
         
       </div>
+      <Footer/>
     </div>
   )
 };

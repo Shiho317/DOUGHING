@@ -7,10 +7,20 @@ type Props = {
   ingredient: ItemTypeInfo;
   setIsBurned: any;
   setAddGreenPepper: any;
+  setAddSalami: any;
+  setAddOlive: any;
+  setAddCheese: any;
 }
 
 
-const CheckBox: React.FC<Props> = ({ingredient, setIsBurned, setAddGreenPepper}) => {
+const CheckBox: React.FC<Props> = ({
+  ingredient, 
+  setIsBurned, 
+  setAddGreenPepper, 
+  setAddSalami, 
+  setAddOlive, 
+  setAddCheese
+}) => {
 
   const [checked, setChecked] = useState(ingredient.add);
   
@@ -24,6 +34,15 @@ const CheckBox: React.FC<Props> = ({ingredient, setIsBurned, setAddGreenPepper})
     if(ingredient.item === 'Green pepper'){
       setAddGreenPepper(ingredient.add);
     };
+    if(ingredient.item === 'Salami'){
+      setAddSalami(ingredient.add);
+    };
+    if(ingredient.item === 'Olive'){
+      setAddOlive(ingredient.add);
+    };
+    if(ingredient.item === 'Cheese'){
+      setAddCheese(ingredient.add)
+    }
   };
 
   return(

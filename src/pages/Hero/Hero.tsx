@@ -2,6 +2,8 @@ import logoWhite from '../../images/doughing-logo-white.svg';
 import './Hero.css';
 import Header from '../Header/Header';
 import Svg from '../Motion/Svg';
+import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 const Hero = () => {
   return(
@@ -13,14 +15,17 @@ const Hero = () => {
             <h1>What <span className='gradient'>Dough</span> You Like?</h1>
             <h3>As many people, as many pizza.</h3>
           </div>
+          <Link to='/built'>
           <div className="hero-btn">
             <button>Make your own pizza</button>
           </div>
+          </Link>
         </div>
         <div className="hero-right">
           <Svg/>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 };

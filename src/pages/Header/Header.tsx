@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { FaPizzaSlice } from 'react-icons/fa';
 import { MdOutlineAccountCircle } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import { BiHistory } from 'react-icons/bi';
 import { RiCoupon3Line } from 'react-icons/ri';
 import Badge from '@mui/material/Badge';
@@ -16,8 +17,11 @@ const Header: React.FC<Props> = ({logo}) => {
       <div className='header'>
         <div className="header-left">
           <img src={logo} alt="logo" />
-          <h3>DOUGHING</h3>
+          <Link to='/'>
+            <h3>DOUGHING</h3>
+          </Link>
         </div>
+        
         <div className="header-right">
           <ul>
             <li><MdOutlineAccountCircle/>Sign In</li>
