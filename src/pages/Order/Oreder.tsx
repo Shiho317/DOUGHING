@@ -3,7 +3,7 @@ import './Order.css';
 const Order = () => {
   return(
     <div className="order-section">
-      <p>Order</p>
+      <h1>Order</h1>
     </div>
   )
 };
