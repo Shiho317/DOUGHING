@@ -1,8 +1,9 @@
+import './Order.css';
 
 const Order = () => {
   return(
-    <div>
-
+    <div className="order-section">
+      <h1>Order</h1>
     </div>
   )
 };
