@@ -7,6 +7,7 @@
   display: grid;
   grid-template-rows: 1fr 8fr 1fr;
   align-items: center;
+  color: white;
 }
 
 .order-details-wrapper{
@@ -23,11 +24,15 @@
   overflow: scroll;
 }
 
-.paidBy ul{
-  display: flex;
-  gap: 1rem;
+.order-details-wrapper h1{
+  text-align: start;
 }
 
-.paidBy li{
-  list-style: none;
+.order-details-wrapper h2{
+  text-align: end;
+}
+
+.paidBy {
+  width: 60%;
+  margin: 0 auto;
 }
