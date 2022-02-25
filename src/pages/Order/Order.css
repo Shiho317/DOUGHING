@@ -4,4 +4,30 @@
   background-image: url('../../images/order-bg.jpg');
   background-size: cover;
   background-position: center;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  align-items: center;
+}
+
+.order-details-wrapper{
+  width: 70%;
+  height: 70vh;
+  margin: 0 auto;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 2rem;
+  overflow: scroll;
+}
+
+.paidBy ul{
+  display: flex;
+  gap: 1rem;
+}
+
+.paidBy li{
+  list-style: none;
 }
