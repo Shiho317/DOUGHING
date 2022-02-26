@@ -1,7 +1,7 @@
 import Checkbox from '@mui/material/Checkbox';
 import { useState } from 'react';
 import { orange } from '@mui/material/colors';
-import { ItemTypeInfo } from '../Built/Built';
+import { ItemTypeInfo } from '../../App';
 
 type Props = {
   ingredient: ItemTypeInfo;
@@ -10,6 +10,7 @@ type Props = {
   setAddSalami: any;
   setAddOlive: any;
   setAddCheese: any;
+  handleAddToOrder: (clickedItem: ItemTypeInfo) => void;
 }
 
 
@@ -19,7 +20,8 @@ const CheckBox: React.FC<Props> = ({
   setAddGreenPepper, 
   setAddSalami, 
   setAddOlive, 
-  setAddCheese
+  setAddCheese,
+  handleAddToOrder,
 }) => {
 
   const [checked, setChecked] = useState(ingredient.add);
@@ -42,6 +44,10 @@ const CheckBox: React.FC<Props> = ({
     };
     if(ingredient.item === 'Cheese'){
       setAddCheese(ingredient.add)
+    }
+
+    if(ingredient.add){
+      handleAddToOrder(ingredient)
     }
   };
 
