@@ -1,0 +1,18 @@
+.order-item{
+  color: black;
+}
+
+.order-item li{
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-dough{
+  display: flex;
+  justify-content: space-between;
+}
+
+.gst,
+.pst{
+  text-align: end;
+}

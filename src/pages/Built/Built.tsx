@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import pizzaNormal from '../../images/pizza-base.png';
 import pizzaThin from '../../images/pizza-base-thin.png';
-import '../Built/Built.css';
 import CheckBox from '../CheckBox/CheckBox';
 import Motion from '../Motion/Motion';
 import { Ingredients } from '../../Ingredients';
@@ -13,15 +12,15 @@ import Salami from './Ingredient/Salami';
 import Olive from './Ingredient/Olive';
 import Cheese from './Ingredient/Cheese';
 import Footer from '../Footer/Footer';
+import { Link } from 'react-router-dom';
+import '../Built/Built.css';
+import { ItemTypeInfo } from '../../App';
 
-export interface ItemTypeInfo{
-  id: number;
-  item: string;
-  image: any;
-  add: boolean;
+type Props = {
+  handleAddToOrder: (clickedItem: ItemTypeInfo) => void;
 }
 
-const Built = () => {
+const Built: React.FC<Props> = ({handleAddToOrder}) => {
 
   const dough = Ingredients[0]
 
@@ -45,7 +44,6 @@ const Built = () => {
   const [ addOlive, setAddOlive ] = useState(false);
   const [ addCheese, setAddCheese ] = useState(false);
 
-
   return(
     <div className='built-section'>
       <Header logo={logoBlack}/>
@@ -62,6 +60,7 @@ const Built = () => {
               setAddSalami={setAddSalami}
               setAddOlive={setAddOlive}
               setAddCheese={setAddCheese}
+              handleAddToOrder={handleAddToOrder}
               />
             </li>
           ))}
@@ -90,9 +89,11 @@ const Built = () => {
             <Olive/>
           </div>
           
+        <Link to='/order'>
         <div className="order-button">
           <button>Order your pizza</button>
         </div>
+        </Link>
         
       </div>
       <Footer/>

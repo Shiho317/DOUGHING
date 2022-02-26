@@ -3,17 +3,25 @@ import logoWhite from '../../images/doughing-logo-white.svg';
 import { PayPalButton } from "react-paypal-button-v2";
 import './Order.css';
 import Footer from '../Footer/Footer';
+import { ItemTypeInfo } from '../../App';
+import OrderItem from './OrderItem/OrderItem';
 
+type Props = {
+  cartItems: ItemTypeInfo[];
+}
 
-
-const Order = () => {
+const Order: React.FC<Props> = ({cartItems}) => {
 
   return(
     <div className="order-section">
       <Header logo={logoWhite}/>
       <div className="order-details-wrapper">
+        <div className='details-wrap'>
+
         <h1>Your pizza details</h1>
-        <h2>Total</h2>
+
+        <OrderItem cartItems={cartItems}/>
+        
         <div className='paidBy'>
           <PayPalButton
             amount="0.01"
@@ -28,6 +36,9 @@ const Order = () => {
             });
             }}
           />
+          <button className='paid-cash'>Cash</button>
+        </div>
+
         </div>
       </div>
       <Footer/>
