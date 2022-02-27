@@ -5,6 +5,7 @@ import './Order.css';
 import Footer from '../Footer/Footer';
 import { ItemTypeInfo } from '../../App';
 import OrderItem from './OrderItem/OrderItem';
+import { Link } from 'react-router-dom';
 
 type Props = {
   cartItems: ItemTypeInfo[];
@@ -36,7 +37,9 @@ const Order: React.FC<Props> = ({cartItems}) => {
             });
             }}
           />
-          <button className='paid-cash'>Cash</button>
+          <Link to='/complete'>
+            <button className='paid-cash'>Cash</button>
+          </Link>
         </div>
 
         </div>

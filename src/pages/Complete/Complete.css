@@ -1,0 +1,78 @@
+.canvas {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 99;
+}
+
+.toHome-btn{
+  position: relative;
+  width: 8rem;
+  text-align: center;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+.toHome-btn::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #ff704d;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.toHome-btn:hover::after{
+  width: 100%;
+}
+
+.toHome-btn button{
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff704d;
+  transition: all 0.3s ease;
+}
+
+.controls button {
+  height: 40px;
+  width: 100px;
+  pointer-events: auto;
+}
+
+.complete-section{
+  background: linear-gradient(to bottom left, red, yellow);
+  width: 100%;
+  height: 100vh;
+}
+
+.complete-wrapper{
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.complete-wrapper img{
+  width: 20rem;
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+}
+
+.complete-details{
+  line-height: 2rem;
+  text-align: center;
+}
