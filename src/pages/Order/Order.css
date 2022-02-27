@@ -1,0 +1,71 @@
+.order-section{
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../images/order-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  align-items: center;
+  color: white;
+}
+
+.order-details-wrapper{
+  width: 70%;
+  height: 70vh;
+  margin: 0 auto;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.details-wrap{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.details-wrap::-webkit-scrollbar{
+  display:none;
+}
+
+.order-details-wrapper h1{
+  text-align: start;
+}
+
+.order-details-wrapper h2{
+  text-align: end;
+}
+
+.paidBy {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.paid-cash{
+  color: white;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #262626;
+  cursor: pointer;
+}
+
+.paid-cash:hover{
+  background-color: #333333;
+}
