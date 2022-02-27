@@ -49,10 +49,15 @@ const Built: React.FC<Props> = ({handleAddToOrder}) => {
       <Header logo={logoBlack}/>
       <div className="built-wrapper">
         <ul className="ingredients">
-          <li><p>{Ingredients.find(ele => ele.id === 1)?.item}</p><Motion toggleSwitch={toggleSwitch} isActive={isActive} isCook={isCook}/></li>
+          <li>
+            <p>{Ingredients.find(ele => ele.id === 1)?.item}</p>
+            <p className='item-price'>$ {Ingredients.find(ele => ele.id === 1)?.price}</p>
+            <Motion toggleSwitch={toggleSwitch} isActive={isActive} isCook={isCook}/>
+          </li>
           {Ingredients.filter(ingredient => ingredient.id > 1).map(ingredient => (
             <li key={ingredient.id}>
               <p>{ingredient.item}</p>
+              <p className='item-price'>+ ${ingredient.price}</p>
               <CheckBox 
               ingredient={ingredient} 
               setIsBurned={setIsBurned}

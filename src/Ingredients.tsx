@@ -9,7 +9,7 @@ export const Ingredients = [
   {
     id: 1,
     item: 'Dough',
-    price: 5,
+    price: 8,
     image: pizzaDough,
     add: false,
   },
