@@ -1,7 +1,7 @@
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
 } from 'react-router-dom';
 
 import Built from './pages/Built/Built';
@@ -14,8 +14,8 @@ import Complete from './pages/Complete/Complete';
 import { initializeApp } from 'firebase/app';
 import { config } from './firebase';
 import Login from './pages/Account/Login';
-import Logout from './pages/Account/Logout';
 import SignUp from './pages/Account/SignUp';
+import AuthRoute from './components/AuthRoute';
 
 export const Firebase = initializeApp(config.firebaseConfig);
 
@@ -45,16 +45,16 @@ function App() {
     console.log(cartItems)
   }
 
+  
   return (
     <div>
       <Router>
         <Routes>
           <Route path='/' element={<Hero/>}/>
-          <Route path='/built' element={<Built handleAddToOrder={handleAddToOrder}/>}/>
+          <Route path='/built' element={<AuthRoute><Built handleAddToOrder={handleAddToOrder}/></AuthRoute>}/>
           <Route path='/order' element={<Order cartItems={cartItems}/>}/>
           <Route path='/complete' element={<Complete/>}/>
           <Route path='/login' element={<Login/>}/>
-          <Route path='/logout' element={<Logout/>}/>
           <Route path='/signup' element={<SignUp/>}/>
         </Routes>
       </Router>

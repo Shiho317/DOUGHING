@@ -48,6 +48,7 @@
   transition: all 0.5s ease;
 }
 
+.header-right span,
 .header-right a{
   display: flex;
   align-items: center;
