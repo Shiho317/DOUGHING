@@ -1,0 +1,116 @@
+.Account-wrapper{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  align-items: center;
+  color: black;
+}
+
+.acc-login-left{
+  position: relative;
+  display: grid;
+  align-items: center;
+  width: 50%;
+  justify-content: center;
+}
+
+.acc-login-left::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom left,rgb(255, 0, 0, 0.5), rgb(255, 255, 0, 0.5));
+}
+
+.acc-login-left img{
+  width: 30rem;
+}
+
+.acc-login-wrap{
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px black;
+  display: flex;
+}
+
+.acc-login-right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.input-forms{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.input-forms label{
+  display: flex;
+  flex-direction: column;
+  color: grey;
+}
+
+.input-forms input{
+  height: 2rem;
+  border: none;
+  border-bottom: 1px solid grey;
+  outline: none;
+}
+
+.login-btn{
+  background: #ff704d;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  width: 10rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.login-btn:hover{
+  background: #ff8f66;
+}
+
+.or{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.grey-border{
+  width: 5rem;
+  height: 1px;
+  background: grey;
+  border: none;
+}
+
+.to-signup{
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.to-signup a{
+  color: grey;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+.to-signup a:hover{
+  color: black;
+}
