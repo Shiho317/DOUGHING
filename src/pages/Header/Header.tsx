@@ -24,7 +24,11 @@ const Header: React.FC<Props> = ({logo}) => {
         
         <div className="header-right">
           <ul>
-            <li><MdOutlineAccountCircle/>Sign In</li>
+            <li>
+              <Link to='/login'>
+                <MdOutlineAccountCircle/>Log In
+              </Link>
+            </li>
             <li><BiHistory/>History</li>
             <li><RiCoupon3Line/>Coupon</li>
             <li><Badge badgeContent={4} color="secondary"><FaPizzaSlice/></Badge></li>
