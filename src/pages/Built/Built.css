@@ -89,7 +89,11 @@
 
 .green-peppers,
 .salamis,
-.olives{
+.olives,
+.basils,
+.pineapples,
+.mashrooms,
+.chilipeppers{
   position: absolute;
   top: 15vh;
   left: 50%;
@@ -132,6 +136,187 @@
 .ol7{
   position: absolute;
   width: 2rem;
+}
+
+.bs1,
+.bs2,
+.bs3,
+.bs4,
+.bs5{
+  position: absolute;
+  width: 2.5rem;
+}
+
+.bs1 img,
+.bs2 img,
+.bs3 img,
+.bs4 img,
+.bs5 img{
+  position: absolute;
+  width: 2.5rem;
+  transition: all 0.5s ease;
+}
+
+.pi1,
+.pi2,
+.pi3,
+.pi4,
+.pi5{
+  position: absolute;
+  width: 2.5rem;
+}
+
+.pi1 img,
+.pi2 img,
+.pi3 img,
+.pi4 img,
+.pi5 img{
+  position: absolute;
+  width: 2.5rem;
+  transition: all 0.5s ease;
+}
+
+.mr1,
+.mr2,
+.mr3,
+.mr4,
+.mr5{
+  position: absolute;
+  width: 2.5rem;
+}
+
+.mr1 img,
+.mr2 img,
+.mr3 img,
+.mr4 img,
+.mr5 img{
+  position: absolute;
+  width: 2.5rem;
+  transition: all 0.5s ease;
+}
+
+.cl1,
+.cl2,
+.cl3,
+.cl4,
+.cl5{
+  position: absolute;
+  width: 3rem;
+}
+
+.cl1 img,
+.cl2 img,
+.cl3 img,
+.cl4 img,
+.cl5 img{
+  position: absolute;
+  width: 3rem;
+  transition: all 0.5s ease;
+}
+
+.cl1{
+  top: 5rem;
+  left: 10rem;
+}
+
+.cl2{
+  top: 20rem;
+  left: 8rem;
+}
+
+.cl3{
+  top: 18rem;
+  left: 20rem;
+}
+
+.cl4{
+  top: 8rem;
+  left: 23rem;
+}
+
+.cl5{
+  top: 13rem;
+  left: 3rem;
+}
+
+.mr1{
+  top: 5rem;
+  left: 8rem;
+}
+
+.mr2{
+  top: 8rem;
+  left: 18rem;
+}
+.mr3{
+  top: 22rem;
+  left: 10rem;
+}
+.mr4{
+  top: 10rem;
+  left: 5rem;
+}
+.mr5{
+  top: 20rem;
+  left: 18rem;
+}
+
+.pi1{
+  top: 15rem;
+  left: 15rem;
+  transform: rotate(20deg)
+}
+
+.pi2{
+  top: 10rem;
+  left: 3rem;
+  transform: rotate(20deg)
+}
+
+.pi3{
+  top: 20rem;
+  left: 20rem;
+  transform: rotate(-100deg)
+}
+
+.pi4{
+  top: 20rem;
+  left: 5rem;
+  transform: rotate(180deg)
+}
+
+.pi5{
+  top: 5rem;
+  left: 15rem;
+  transform: rotate(40deg)
+}
+
+.bs1{
+  top: 7rem;
+  left: 5rem;
+  transform: rotate(-25deg)
+}
+
+.bs2{
+  top: 5rem;
+  left: 20rem;
+  transform: rotate(90deg);
+}
+
+.bs3{
+  top: 20rem;
+  left: 10rem;
+}
+
+.bs4{
+  top: 15rem;
+  left: 25rem;
+  transform: rotate(120deg)
+}
+
+.bs5{
+  top: 10rem;
+  left: 10rem;
 }
 
 .ol1 img,
