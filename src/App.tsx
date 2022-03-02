@@ -28,7 +28,6 @@ export interface ItemTypeInfo{
   id: number;
   price: number;
   item: string;
-  image: any;
   add: boolean;
 }
 
@@ -99,7 +98,8 @@ function App() {
           <Route path='/' 
             element={<Hero isCount={isCount}/>} />
           <Route path='/built' 
-            element={<AuthRoute>
+            element={
+            <AuthRoute>
             <Built 
               handleAddToOrder={handleAddToOrder} 
               handleRemoveFromOrder={handleRemoveFromOrder}
@@ -107,7 +107,8 @@ function App() {
               isCount={isCount}
               isCountAdd={isCountAdd}
               />
-            </AuthRoute>}/>
+            </AuthRoute>
+            }/>
           <Route path='/order' 
             element={<AuthRoute>
             <Order 

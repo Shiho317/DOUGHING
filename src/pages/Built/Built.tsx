@@ -15,6 +15,10 @@ import Footer from '../Footer/Footer';
 import { Link } from 'react-router-dom';
 import '../Built/Built.css';
 import { ItemTypeInfo } from '../../App';
+import Mashroom from './Ingredient/Mashroom';
+import Pineapple from './Ingredient/Pineapple';
+import Basil from './Ingredient/Basil';
+import Chili from './Ingredient/Chili';
 
 
 type Props = {
@@ -47,7 +51,12 @@ const Built: React.FC<Props> = ({handleAddToOrder, handleRemoveFromOrder, addToF
   const [ addGreenPepper, setAddGreenPepper ] = useState(false);
   const [ addSalami, setAddSalami ] = useState(false);
   const [ addOlive, setAddOlive ] = useState(false);
+  const [ addMashroom, setAddMashroom ] = useState(false);
+  const [ addPineapple, setAddPineapple ] = useState(false);
   const [ addCheese, setAddCheese ] = useState(false);
+  const [ addBasil, setAddBasil ] = useState(false);
+  const [ addChili, setAddChili ] = useState(false);
+
 
   return(
     <div className='built-section'>
@@ -69,6 +78,10 @@ const Built: React.FC<Props> = ({handleAddToOrder, handleRemoveFromOrder, addToF
               setAddGreenPepper={setAddGreenPepper}
               setAddSalami={setAddSalami}
               setAddOlive={setAddOlive}
+              setAddMashroom={setAddMashroom}
+              setAddPineapple={setAddPineapple}
+              setAddBasil={setAddBasil}
+              setAddChili={setAddChili}
               setAddCheese={setAddCheese}
               handleAddToOrder={handleAddToOrder}
               handleRemoveFromOrder={handleRemoveFromOrder}
@@ -98,6 +111,22 @@ const Built: React.FC<Props> = ({handleAddToOrder, handleRemoveFromOrder, addToF
 
           <div className={addOlive ? 'olives' : 'unshown' }>
             <Olive/>
+          </div>
+
+          <div className={addMashroom ? "mashrooms" : 'unshown' }>
+            <Mashroom/>
+          </div>
+
+          <div className={addPineapple ? "pineapples" : 'unshown' }>
+            <Pineapple/>
+          </div>
+
+          <div className={addBasil ? "basils" : 'unshown' }>
+            <Basil/>
+          </div>
+
+          <div className={addChili ? "chilipeppers" : 'unshown' }>
+            <Chili/>
           </div>
           
         <Link to='/order'>
