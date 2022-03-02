@@ -9,13 +9,15 @@ import { Link } from 'react-router-dom';
 
 type Props = {
   cartItems: ItemTypeInfo[];
+  isCount: number;
+  isCountReset: () => void;
 }
 
-const Order: React.FC<Props> = ({cartItems}) => {
+const Order: React.FC<Props> = ({cartItems, isCount, isCountReset}) => {
 
   return(
     <div className="order-section">
-      <Header logo={logoWhite}/>
+      <Header logo={logoWhite} isCount={isCount}/>
       <div className="order-details-wrapper">
         <div className='details-wrap'>
 
@@ -23,7 +25,7 @@ const Order: React.FC<Props> = ({cartItems}) => {
 
         <OrderItem cartItems={cartItems}/>
         
-        <div className='paidBy'>
+        <div className='paidBy' onClick={isCountReset}>
           <PayPalButton
             amount="0.01"
             onSuccess={(details: any, data: any) => {
@@ -37,7 +39,7 @@ const Order: React.FC<Props> = ({cartItems}) => {
             });
             }}
           />
-          <Link to='/complete'>
+          <Link to='/complete' onClick={isCountReset}>
             <button className='paid-cash'>Cash</button>
           </Link>
         </div>

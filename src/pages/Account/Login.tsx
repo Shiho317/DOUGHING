@@ -7,7 +7,11 @@ import loginImg from '../../images/login.webp';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 
-const Login = () => {
+type Props ={
+  isCount: number;
+}
+
+const Login: React.FC<Props> = ({isCount}) => {
 
   const auth = getAuth();
   const navigate = useNavigate();
@@ -22,6 +26,7 @@ const Login = () => {
         .then((userCredential) => {
           const user = userCredential.user
           console.log(user)
+          console.log(user.uid)
           navigate('/built')
         })
       .catch((error) => {
@@ -34,7 +39,7 @@ const Login = () => {
 
   return(
     <div className="Account-wrapper">
-      <Header logo={logoBlack}/>
+      <Header logo={logoBlack} isCount={isCount}/>
       <div className="acc-login-wrap">
 
         <div className="acc-login-left">

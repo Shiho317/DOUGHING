@@ -5,10 +5,14 @@ import Svg from '../Motion/Svg';
 import { Link } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 
-const Hero = () => {
+type Props = {
+  isCount: number;
+}
+
+const Hero: React.FC<Props> = ({isCount}) => {
   return(
     <div className='hero-section'>
-      <Header logo={logoWhite}/>
+      <Header logo={logoWhite} isCount={isCount}/>
       <div className="hero-wrap">
         <div className="hero-left">
           <div className="hero-title">

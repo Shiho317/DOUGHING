@@ -31,8 +31,8 @@ const OrderItem: React.FC<Props> = ({cartItems}) => {
       {cartItems.map(item => (
         <ul>
           <li>
-            <h3 key={item.id}>{item.item}</h3>
-            <p key={item.id}>{(item.price).toFixed(2)}</p>
+            <h3 key={`item-${item.id}`}>{item.item}</h3>
+            <p key={`price-${item.id}`}>{(item.price).toFixed(2)}</p>
           </li>
         </ul>
       ))}
