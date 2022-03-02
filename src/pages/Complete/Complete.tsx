@@ -3,7 +3,6 @@ import { Component } from 'react';
 import ReactCanvasConfetti from './Confetti/Confetti';
 import gif from '../../images/pizza-making.gif';
 import './Complete.css';
-import Header from "../Header/Header";
 import logoBlack from '../../images/doughing-logo-black.svg';
 import { Link } from 'react-router-dom';
 
@@ -64,7 +63,10 @@ export default class Complete extends Component {
   render() {
     return (
       <div className="complete-section" onLoad={this.handlerFire}>
-          <Header logo={logoBlack}/>
+        <div className='complete-logo'>
+          <img src={logoBlack} alt="logo" />
+        </div>
+        
         <div className="complete-wrapper">
           <img src={gif} alt="gif" />
           <h1>Thank you for Ordering!</h1>

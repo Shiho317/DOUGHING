@@ -53,6 +53,18 @@
   height: 100vh;
 }
 
+.complete-logo{
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.complete-logo img{
+  width: 3rem;
+}
+
 .complete-wrapper{
   width: 80%;
   height: 80vh;

@@ -10,9 +10,10 @@ import { getAuth, signOut } from 'firebase/auth';
 
 type Props = {
   logo: string;
+  isCount: number;
 };
 
-const Header: React.FC<Props> = ({logo}) => {
+const Header: React.FC<Props> = ({logo, isCount}) => {
 
   const auth = getAuth();
 
@@ -58,7 +59,7 @@ const Header: React.FC<Props> = ({logo}) => {
               </span>
             </li>
 
-            <li><Badge badgeContent={4} color="secondary"><FaPizzaSlice/></Badge></li>
+            <li><Badge badgeContent={isCount} color="secondary"><FaPizzaSlice/></Badge></li>
           </ul>
         </div>
       </div>

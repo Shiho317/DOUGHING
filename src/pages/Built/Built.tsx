@@ -16,11 +16,16 @@ import { Link } from 'react-router-dom';
 import '../Built/Built.css';
 import { ItemTypeInfo } from '../../App';
 
+
 type Props = {
   handleAddToOrder: (clickedItem: ItemTypeInfo) => void;
+  handleRemoveFromOrder: (id: number) => void;
+  addToFireStore: () => void;
+  isCount: number;
+  isCountAdd: () => void;
 }
 
-const Built: React.FC<Props> = ({handleAddToOrder}) => {
+const Built: React.FC<Props> = ({handleAddToOrder, handleRemoveFromOrder, addToFireStore, isCount, isCountAdd}) => {
 
   const dough = Ingredients[0]
 
@@ -46,7 +51,7 @@ const Built: React.FC<Props> = ({handleAddToOrder}) => {
 
   return(
     <div className='built-section'>
-      <Header logo={logoBlack}/>
+      <Header logo={logoBlack} isCount={isCount}/>
       <div className="built-wrapper">
         <ul className="ingredients">
           <li>
@@ -66,6 +71,7 @@ const Built: React.FC<Props> = ({handleAddToOrder}) => {
               setAddOlive={setAddOlive}
               setAddCheese={setAddCheese}
               handleAddToOrder={handleAddToOrder}
+              handleRemoveFromOrder={handleRemoveFromOrder}
               />
             </li>
           ))}
@@ -95,8 +101,8 @@ const Built: React.FC<Props> = ({handleAddToOrder}) => {
           </div>
           
         <Link to='/order'>
-        <div className="order-button">
-          <button>Order your pizza</button>
+        <div className="order-button" onClick={addToFireStore}>
+          <button onClick={isCountAdd}>Order your pizza</button>
         </div>
         </Link>
         

@@ -11,6 +11,7 @@ type Props = {
   setAddOlive: any;
   setAddCheese: any;
   handleAddToOrder: (clickedItem: ItemTypeInfo) => void;
+  handleRemoveFromOrder: (id: number) => void;
 }
 
 
@@ -22,6 +23,7 @@ const CheckBox: React.FC<Props> = ({
   setAddOlive, 
   setAddCheese,
   handleAddToOrder,
+  handleRemoveFromOrder,
 }) => {
 
   const [checked, setChecked] = useState(ingredient.add);
@@ -48,6 +50,8 @@ const CheckBox: React.FC<Props> = ({
 
     if(ingredient.add){
       handleAddToOrder(ingredient)
+    }else if(!ingredient.add){
+      handleRemoveFromOrder(ingredient.id)
     }
   };
 

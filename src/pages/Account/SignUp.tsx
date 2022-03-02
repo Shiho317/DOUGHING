@@ -7,7 +7,11 @@ import signupImg from '../../images/signup.webp';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 
-const SignUp = () => {
+type Props ={
+  isCount: number;
+}
+
+const SignUp: React.FC<Props> = ({isCount}) => {
 
   const auth = getAuth();
   const navigate = useNavigate();
@@ -44,7 +48,7 @@ const SignUp = () => {
 
   return(
     <div className="Account-wrapper">
-      <Header logo={logoBlack}/>
+      <Header logo={logoBlack} isCount={isCount}/>
       <div className="acc-signup-wrap">
 
         <div className="acc-signup-left">
