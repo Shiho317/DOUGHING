@@ -1,14 +1,15 @@
 .footer{
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 90%;
   height: 5rem;
   padding: 0.5rem 0;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0%;
+  transform: translateX(0%);
 }
 
 .footer p{
@@ -31,4 +32,13 @@
 
 .footer li:hover{
   color: #dcdcdc;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

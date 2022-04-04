@@ -1,508 +1,518 @@
-.hidden{
-  display: none;
-  opacity: 0;
-}
-
-.unshown{
-  position: absolute;
-  top: -100vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30rem;
-  height: 30rem;
-  border-radius: 50%;
-  transition: all 1s ease;
-}
-
-.built-section{
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 9fr;
-  align-items: center;
-  color: black;
-}
-
-.built-wrapper{
-  width: 90%;
-  margin: 0 auto;
-}
-
-.ingredients{
-  width: 100%;
-  height: 30rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-between;
-  gap: 4rem;
-  list-style: none;
-}
-
-.ingredients li{
+.error {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
   font-size: 1rem;
 }
 
-.ingredients p{
-  font-weight: bold;
-}
-
-.pizza-img{
-  position: absolute;
-  top: 15vh;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.pizza-img img{
-  width: 30rem;
-}
-
-.pizza-burn{
-  position: absolute;
-  top: 12vh;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all 1s ease;
-}
-
-.pizza-burn img{
-  width: 33rem;
-}
-
-.cheese-dough{
-  position: absolute;
-  top: 17.7vh;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all 1s ease;
-  border-radius: 50%;
-}
-
-.cheese-dough img{
-  width: 26rem;
-}
-
-.green-peppers,
-.salamis,
-.olives,
-.basils,
-.pineapples,
-.mashrooms,
-.chilipeppers{
-  position: absolute;
-  top: 15vh;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all 1s ease;
-  width: 30rem;
-  height: 30rem;
-  border-radius: 50%;
-}
-
-.gp1,
-.gp2,
-.gp3,
-.gp4,
-.gp5,
-.gp6,
-.gp7,
-.gp8,
-.gp9{
-  position: absolute;
-  width: 3rem;
-}
-
-.sl1,
-.sl2,
-.sl3,
-.sl4,
-.sl5,
-.sl6{
-  position: absolute;
-  width: 3rem;
-}
-
-.ol1,
-.ol2,
-.ol3,
-.ol4,
-.ol5,
-.ol6,
-.ol7{
-  position: absolute;
-  width: 2rem;
-}
-
-.bs1,
-.bs2,
-.bs3,
-.bs4,
-.bs5{
-  position: absolute;
-  width: 2.5rem;
-}
-
-.bs1 img,
-.bs2 img,
-.bs3 img,
-.bs4 img,
-.bs5 img{
-  position: absolute;
-  width: 2.5rem;
-  transition: all 0.5s ease;
-}
-
-.pi1,
-.pi2,
-.pi3,
-.pi4,
-.pi5{
-  position: absolute;
-  width: 2.5rem;
-}
-
-.pi1 img,
-.pi2 img,
-.pi3 img,
-.pi4 img,
-.pi5 img{
-  position: absolute;
-  width: 2.5rem;
-  transition: all 0.5s ease;
-}
-
-.mr1,
-.mr2,
-.mr3,
-.mr4,
-.mr5{
-  position: absolute;
-  width: 2.5rem;
-}
-
-.mr1 img,
-.mr2 img,
-.mr3 img,
-.mr4 img,
-.mr5 img{
-  position: absolute;
-  width: 2.5rem;
-  transition: all 0.5s ease;
-}
-
-.cl1,
-.cl2,
-.cl3,
-.cl4,
-.cl5{
-  position: absolute;
-  width: 3rem;
-}
-
-.cl1 img,
-.cl2 img,
-.cl3 img,
-.cl4 img,
-.cl5 img{
-  position: absolute;
-  width: 3rem;
-  transition: all 0.5s ease;
-}
-
-.cl1{
-  top: 5rem;
-  left: 10rem;
-}
-
-.cl2{
-  top: 20rem;
-  left: 8rem;
-}
-
-.cl3{
-  top: 18rem;
-  left: 20rem;
-}
-
-.cl4{
-  top: 8rem;
-  left: 23rem;
-}
-
-.cl5{
-  top: 13rem;
-  left: 3rem;
-}
-
-.mr1{
-  top: 5rem;
-  left: 8rem;
-}
-
-.mr2{
-  top: 8rem;
-  left: 18rem;
-}
-.mr3{
-  top: 22rem;
-  left: 10rem;
-}
-.mr4{
-  top: 10rem;
-  left: 5rem;
-}
-.mr5{
-  top: 20rem;
-  left: 18rem;
-}
-
-.pi1{
-  top: 15rem;
-  left: 15rem;
-  transform: rotate(20deg)
-}
-
-.pi2{
-  top: 10rem;
-  left: 3rem;
-  transform: rotate(20deg)
-}
-
-.pi3{
-  top: 20rem;
-  left: 20rem;
-  transform: rotate(-100deg)
-}
-
-.pi4{
-  top: 20rem;
-  left: 5rem;
-  transform: rotate(180deg)
-}
-
-.pi5{
-  top: 5rem;
-  left: 15rem;
-  transform: rotate(40deg)
-}
-
-.bs1{
-  top: 7rem;
-  left: 5rem;
-  transform: rotate(-25deg)
-}
-
-.bs2{
-  top: 5rem;
-  left: 20rem;
-  transform: rotate(90deg);
-}
-
-.bs3{
-  top: 20rem;
-  left: 10rem;
-}
-
-.bs4{
-  top: 15rem;
-  left: 25rem;
-  transform: rotate(120deg)
-}
-
-.bs5{
-  top: 10rem;
-  left: 10rem;
-}
-
-.ol1 img,
-.ol2 img,
-.ol3 img,
-.ol4 img,
-.ol5 img,
-.ol6 img,
-.ol7 img{
-  position: absolute;
-  width: 2rem;
-  transition: all 0.5s ease;
-}
-
-.ol1{
-  top: 7rem;
-  left: 20%;
-}
-
-.ol2{
-  top: 10rem;
-  left: 45%;
-}
-
-.ol3{
-  top: 20rem;
-  left: 25%;
-}
-
-.ol4{
-  top: 15rem;
-  left: 80%;
-}
-
-.ol5{
-  top: 15rem;
-  left: 20%;
-}
-
-.ol6{
-  top: 22rem;
-  left: 60%;
-}
-
-.ol7{
-  top: 5rem;
-  left: 70%;
-}
-
-.sl1 img,
-.sl2 img,
-.sl3 img,
-.sl4 img,
-.sl5 img,
-.sl6 img,
-.sl7 img,
-.sl8 img,
-.sl9 img{
-  position: absolute;
-  width: 3rem;
-  transition: all 0.5s ease;
-}
-
-.sl1{
-  top: 8rem;
-  left: 60%;
-}
-
-.sl2{
-  top: 10rem;
-  left: 20%;
-}
-
-.sl3{
-  top: 18rem;
-  left: 70%;
-}
-
-.sl4{
-  top: 15rem;
-  left: 15%;
-}
-
-.sl5{
-  top: 5rem;
-  left: 45%;
-}
-
-.sl6{
-  top: 23rem;
-  left: 40%;
-}
-
-.gp1 img,
-.gp2 img,
-.gp3 img,
-.gp4 img,
-.gp5 img,
-.gp6 img,
-.gp7 img,
-.gp8 img,
-.gp9 img{
-  position: absolute;
-  width: 3rem;
-  transition: all 0.5s ease;
-}
-
-.gp1{
-  top: 2rem;
-  left: 50%;
-}
-
-.gp2{
-  top: 20rem;
-  left: 35%;
-}
-
-.gp3{
-  top: 10rem;
-  left: 8%;
-  transform: rotate(90deg);
-}
-
-.gp4{
-  top: 15rem;
-  left: 25%;
-  transform: rotate(180deg);
-}
-
-.gp5{
-  top: 10rem;
-  left: 80%;
-  transform: rotate(45deg);
-}
-
-.gp6{
-  top: 15rem;
-  left: 55%;
-  transform: rotate(200deg);
-}
-
-.gp7{
-  top: 12rem;
-  left: 45%;
-  transform: rotate(20deg);
-}
-
-.gp8{
-  top: 23rem;
-  left: 60%;
-  transform: rotate(30deg);
-}
-
-.gp9{
-  top: 5rem;
-  left: 30%;
-  transform: rotate(-60deg);
-}
-
-.order-button{
-  position: absolute;
-  bottom: 8rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.order-button button{
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: linear-gradient(to bottom, red, yellow);
-  background-clip: text;
-  color: transparent;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.order-button button:hover{
-  border: 2px solid orange;
-}
-
-.item-price{
-  font-size: 0.8rem;
+@media screen and (min-width: 1024px){
+  .hidden{
+    display: none;
+    opacity: 0;
+  }
+  
+  .unshown{
+    position: absolute;
+    top: -100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    transition: all 1s ease;
+  }
+  
+  .built-section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    align-items: center;
+    color: black;
+  }
+  
+  .built-wrapper{
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .ingredients{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap: 4rem;
+    list-style: none;
+  }
+  
+  .ingredients li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  
+  .ingredients p{
+    font-weight: bold;
+  }
+  
+  .pizza-img{
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .pizza-img img{
+    width: 30rem;
+  }
+  
+  .pizza-burn{
+    position: absolute;
+    top: 12vh;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s ease;
+  }
+  
+  .pizza-burn img{
+    width: 33rem;
+  }
+  
+  .cheese-dough{
+    position: absolute;
+    top: 17.7vh;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s ease;
+    border-radius: 50%;
+  }
+  
+  .cheese-dough img{
+    width: 26rem;
+  }
+  
+  .green-peppers,
+  .salamis,
+  .olives,
+  .basils,
+  .pineapples,
+  .mashrooms,
+  .chilipeppers{
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s ease;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+  }
+  
+  .gp1,
+  .gp2,
+  .gp3,
+  .gp4,
+  .gp5,
+  .gp6,
+  .gp7,
+  .gp8,
+  .gp9{
+    position: absolute;
+    width: 3rem;
+  }
+  
+  .sl1,
+  .sl2,
+  .sl3,
+  .sl4,
+  .sl5,
+  .sl6{
+    position: absolute;
+    width: 3rem;
+  }
+  
+  .ol1,
+  .ol2,
+  .ol3,
+  .ol4,
+  .ol5,
+  .ol6,
+  .ol7{
+    position: absolute;
+    width: 2rem;
+  }
+  
+  .bs1,
+  .bs2,
+  .bs3,
+  .bs4,
+  .bs5{
+    position: absolute;
+    width: 2.5rem;
+  }
+  
+  .bs1 img,
+  .bs2 img,
+  .bs3 img,
+  .bs4 img,
+  .bs5 img{
+    position: absolute;
+    width: 2.5rem;
+    transition: all 0.5s ease;
+  }
+  
+  .pi1,
+  .pi2,
+  .pi3,
+  .pi4,
+  .pi5{
+    position: absolute;
+    width: 2.5rem;
+  }
+  
+  .pi1 img,
+  .pi2 img,
+  .pi3 img,
+  .pi4 img,
+  .pi5 img{
+    position: absolute;
+    width: 2.5rem;
+    transition: all 0.5s ease;
+  }
+  
+  .mr1,
+  .mr2,
+  .mr3,
+  .mr4,
+  .mr5{
+    position: absolute;
+    width: 2.5rem;
+  }
+  
+  .mr1 img,
+  .mr2 img,
+  .mr3 img,
+  .mr4 img,
+  .mr5 img{
+    position: absolute;
+    width: 2.5rem;
+    transition: all 0.5s ease;
+  }
+  
+  .cl1,
+  .cl2,
+  .cl3,
+  .cl4,
+  .cl5{
+    position: absolute;
+    width: 3rem;
+  }
+  
+  .cl1 img,
+  .cl2 img,
+  .cl3 img,
+  .cl4 img,
+  .cl5 img{
+    position: absolute;
+    width: 3rem;
+    transition: all 0.5s ease;
+  }
+  
+  .cl1{
+    top: 5rem;
+    left: 10rem;
+  }
+  
+  .cl2{
+    top: 20rem;
+    left: 8rem;
+  }
+  
+  .cl3{
+    top: 18rem;
+    left: 20rem;
+  }
+  
+  .cl4{
+    top: 8rem;
+    left: 23rem;
+  }
+  
+  .cl5{
+    top: 13rem;
+    left: 3rem;
+  }
+  
+  .mr1{
+    top: 5rem;
+    left: 8rem;
+  }
+  
+  .mr2{
+    top: 8rem;
+    left: 18rem;
+  }
+  .mr3{
+    top: 22rem;
+    left: 10rem;
+  }
+  .mr4{
+    top: 10rem;
+    left: 5rem;
+  }
+  .mr5{
+    top: 20rem;
+    left: 18rem;
+  }
+  
+  .pi1{
+    top: 15rem;
+    left: 15rem;
+    transform: rotate(20deg)
+  }
+  
+  .pi2{
+    top: 10rem;
+    left: 3rem;
+    transform: rotate(20deg)
+  }
+  
+  .pi3{
+    top: 20rem;
+    left: 20rem;
+    transform: rotate(-100deg)
+  }
+  
+  .pi4{
+    top: 20rem;
+    left: 5rem;
+    transform: rotate(180deg)
+  }
+  
+  .pi5{
+    top: 5rem;
+    left: 15rem;
+    transform: rotate(40deg)
+  }
+  
+  .bs1{
+    top: 7rem;
+    left: 5rem;
+    transform: rotate(-25deg)
+  }
+  
+  .bs2{
+    top: 5rem;
+    left: 20rem;
+    transform: rotate(90deg);
+  }
+  
+  .bs3{
+    top: 20rem;
+    left: 10rem;
+  }
+  
+  .bs4{
+    top: 15rem;
+    left: 25rem;
+    transform: rotate(120deg)
+  }
+  
+  .bs5{
+    top: 10rem;
+    left: 10rem;
+  }
+  
+  .ol1 img,
+  .ol2 img,
+  .ol3 img,
+  .ol4 img,
+  .ol5 img,
+  .ol6 img,
+  .ol7 img{
+    position: absolute;
+    width: 2rem;
+    transition: all 0.5s ease;
+  }
+  
+  .ol1{
+    top: 7rem;
+    left: 20%;
+  }
+  
+  .ol2{
+    top: 10rem;
+    left: 45%;
+  }
+  
+  .ol3{
+    top: 20rem;
+    left: 25%;
+  }
+  
+  .ol4{
+    top: 15rem;
+    left: 80%;
+  }
+  
+  .ol5{
+    top: 15rem;
+    left: 20%;
+  }
+  
+  .ol6{
+    top: 22rem;
+    left: 60%;
+  }
+  
+  .ol7{
+    top: 5rem;
+    left: 70%;
+  }
+  
+  .sl1 img,
+  .sl2 img,
+  .sl3 img,
+  .sl4 img,
+  .sl5 img,
+  .sl6 img,
+  .sl7 img,
+  .sl8 img,
+  .sl9 img{
+    position: absolute;
+    width: 3rem;
+    transition: all 0.5s ease;
+  }
+  
+  .sl1{
+    top: 8rem;
+    left: 60%;
+  }
+  
+  .sl2{
+    top: 10rem;
+    left: 20%;
+  }
+  
+  .sl3{
+    top: 18rem;
+    left: 70%;
+  }
+  
+  .sl4{
+    top: 15rem;
+    left: 15%;
+  }
+  
+  .sl5{
+    top: 5rem;
+    left: 45%;
+  }
+  
+  .sl6{
+    top: 23rem;
+    left: 40%;
+  }
+  
+  .gp1 img,
+  .gp2 img,
+  .gp3 img,
+  .gp4 img,
+  .gp5 img,
+  .gp6 img,
+  .gp7 img,
+  .gp8 img,
+  .gp9 img{
+    position: absolute;
+    width: 3rem;
+    transition: all 0.5s ease;
+  }
+  
+  .gp1{
+    top: 2rem;
+    left: 50%;
+  }
+  
+  .gp2{
+    top: 20rem;
+    left: 35%;
+  }
+  
+  .gp3{
+    top: 10rem;
+    left: 8%;
+    transform: rotate(90deg);
+  }
+  
+  .gp4{
+    top: 15rem;
+    left: 25%;
+    transform: rotate(180deg);
+  }
+  
+  .gp5{
+    top: 10rem;
+    left: 80%;
+    transform: rotate(45deg);
+  }
+  
+  .gp6{
+    top: 15rem;
+    left: 55%;
+    transform: rotate(200deg);
+  }
+  
+  .gp7{
+    top: 12rem;
+    left: 45%;
+    transform: rotate(20deg);
+  }
+  
+  .gp8{
+    top: 23rem;
+    left: 60%;
+    transform: rotate(30deg);
+  }
+  
+  .gp9{
+    top: 5rem;
+    left: 30%;
+    transform: rotate(-60deg);
+  }
+  
+  .order-button{
+    position: absolute;
+    bottom: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .order-button button{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(to bottom, red, yellow);
+    background-clip: text;
+    color: transparent;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .order-button button:hover{
+    border: 2px solid orange;
+  }
+  
+  .item-price{
+    font-size: 0.8rem;
+  }
+  
 }

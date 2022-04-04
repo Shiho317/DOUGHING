@@ -7,10 +7,11 @@ const divStyle = {
   justifyContent: 'space-between',
   alignItems: 'center',
   borderRadius: '5px',
+  width: '50%'
 };
 
 const toggleStyle = {
-  width: '5rem',
+  width: '50%',
   borderRadius: '3px',
   border: 'none',
   background: 'white',
@@ -23,14 +24,14 @@ const toggleStyle = {
 }
 
 const switchStyle = {
-  width: '10rem',
+  width: '100%',
   display: "flex",
   justifyContent: "flex-start",
   cursor: 'pointer',
 }
 
 const switchStyle2 = {
-  width: '10rem',
+  width: '100%',
   display: "flex",
   justifyContent: "flex-end",
   cursor: 'pointer',

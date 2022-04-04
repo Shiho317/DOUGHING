@@ -28,7 +28,7 @@ const Svg = () => {
   };
 
   return(
-    <motion.svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <motion.svg width="80%" height="80%" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg"
     variants={svgVariants} initial="hidden" animate="visible">
     <circle cx="250" cy="250" r="245" stroke="url(#paint0_linear_3_38)" strokeWidth="10"/>
     <motion.line x1="4.99976" y1="245" x2="491" y2="245" stroke="url(#paint1_linear_3_38)" strokeWidth="10" variants={pathVariants}/>

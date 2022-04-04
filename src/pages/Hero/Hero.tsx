@@ -20,9 +20,9 @@ const Hero: React.FC<Props> = ({isCount}) => {
             <h3>As many people, as many pizza.</h3>
           </div>
           <Link to='/built'>
-          <div className="hero-btn">
-            <button>Make your own pizza</button>
-          </div>
+            <div className="hero-btn">
+              <button>Make your own pizza</button>
+            </div>
           </Link>
         </div>
         <div className="hero-right">

@@ -19,7 +19,7 @@ import Mashroom from './Ingredient/Mashroom';
 import Pineapple from './Ingredient/Pineapple';
 import Basil from './Ingredient/Basil';
 import Chili from './Ingredient/Chili';
-
+import { useMediaQuery } from 'react-responsive';
 
 type Props = {
   handleAddToOrder: (clickedItem: ItemTypeInfo) => void;
@@ -58,9 +58,24 @@ const Built: React.FC<Props> = ({handleAddToOrder, handleRemoveFromOrder, addToF
   const [ addChili, setAddChili ] = useState(false);
 
 
+  const isMobile = useMediaQuery({query: '(max-width: 768px)'});
+  const isDesktop = useMediaQuery({query: '(min-width: 1024px)'});
+
+
+
   return(
     <div className='built-section'>
       <Header logo={logoBlack} isCount={isCount}/>
+      {isMobile && (
+        <div className='error'>
+          <p>
+            Now, bulding pizza page doesn't support for mobile phone.<br/>
+            Please use computer.<br/>
+            We are apologize for your inconvinience.
+          </p>
+        </div>
+      )}
+      {isDesktop && (
       <div className="built-wrapper">
         <ul className="ingredients">
           <li>
@@ -136,6 +151,7 @@ const Built: React.FC<Props> = ({handleAddToOrder, handleRemoveFromOrder, addToF
         </Link>
         
       </div>
+      )}
       <Footer/>
     </div>
   )

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { FaPizzaSlice } from 'react-icons/fa';
-import { MdOutlineAccountCircle } from 'react-icons/md';
+import { MdOutlineAccountCircle, MdOutlineClose } from 'react-icons/md';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import { FiUserPlus } from 'react-icons/fi';
 import { IoMdLogOut } from 'react-icons/io';
@@ -31,6 +32,12 @@ const Header: React.FC<Props> = ({logo, isCount}) => {
     })
   }
 
+  const [ isOpen, setIsOpen ] = React.useState(false);
+
+  const onClick = () => {
+    setIsOpen(prev => !prev)
+  }; 
+
   return(
     <div>
       <div className='header'>
@@ -40,28 +47,37 @@ const Header: React.FC<Props> = ({logo, isCount}) => {
             <h3>DOUGHING</h3>
           </Link>
         </div>
-        
-        <div className="header-right">
-          <ul>
-            <li>
-              <Link to='/login'>
-                <MdOutlineAccountCircle/>Log In
-              </Link>
-            </li>
-            <li>
-              <Link to='/signup'>
-                <FiUserPlus/>Sign Up
-              </Link>
-            </li>
-            <li>
-              <span onClick={() => userLoggingOut()}>
-                <IoMdLogOut/>Log Out
-              </span>
-            </li>
-
-            <li><Badge badgeContent={isCount} color="secondary"><FaPizzaSlice/></Badge></li>
-          </ul>
-        </div>
+            <div className={isOpen ? "header-right" : 'header-right hidden'}>
+              <ul>
+                <li>
+                  <Link to='/login'>
+                    <MdOutlineAccountCircle/>Log In
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/signup'>
+                    <FiUserPlus/>Sign Up
+                  </Link>
+                </li>
+                <li>
+                  <span onClick={() => userLoggingOut()}>
+                    <IoMdLogOut/>Log Out
+                  </span>
+                </li>
+                <li>
+                  <Badge badgeContent={isCount} color="secondary">
+                    <FaPizzaSlice/>
+                  </Badge>
+                </li>
+              </ul>
+            </div>
+            <div className='menu-icon'>
+                {!isOpen ? (
+                  <GiHamburgerMenu onClick={onClick}/>
+                ) : (
+                  <MdOutlineClose onClick={onClick}/>
+                )}
+            </div>
       </div>
     </div>
   )

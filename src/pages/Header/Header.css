@@ -1,5 +1,6 @@
 
 .header{
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -20,6 +21,7 @@
   transition: all 0.5s ease;
   padding: 0.5rem 1rem;
   border-radius: 15px;
+  font-size: 1rem;
 }
 
 .header-left a{
@@ -32,13 +34,27 @@
 }
 
 .header-left img{
-  width: 2.5rem;
+  width: 1.5rem;
+}
+
+.header-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  background: linear-gradient(to bottom, red, yellow);
+  z-index: 99;
 }
 
 .header-right ul{
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   list-style: none;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .header-right li{
@@ -62,3 +78,48 @@
   color: black;
 }
 
+.menu-icon {
+  position: fixed;
+  top: 1.8rem;
+  right: 1.5rem;
+  font-size: 1.2rem;
+  color: orange;
+  z-index: 100;
+}
+
+.hidden {
+  right: 100%;
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 768px){
+
+}
+
+@media screen and (min-width: 1024px){
+  .header {
+    width: 90%;
+  }
+
+  .header-left img{
+    width: 2.5rem;
+  }
+
+  .header-left h3{
+    font-size: 1.5rem;
+  }
+
+  .header-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: unset;
+    height: 5rem;
+    background: transparent;
+  }
+
+  .header-right ul{
+    flex-direction: row;
+    align-items: center;
+  }
+}
